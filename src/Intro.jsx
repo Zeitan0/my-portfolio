@@ -8,6 +8,7 @@ import sl from "./assets/sl.png";
 import shelf from "./assets/shelf.png";
 import tv from "./assets/TV.png";
 import image from "./assets/attack_on_titan_pixel_art.png";
+import bgMusic from '/bg-music.mp3';
 
 function Intro() {
   const audioRef = useRef(null);
@@ -47,9 +48,8 @@ const handleMusicToggle = () => {
   return (
     <>
       <audio ref={audioRef} loop muted={false} preload="auto">
-  <source src="bg-music.mp3" type="audio/mpeg" />
+  <source src={bgMusic} type="audio/mpeg" />
 </audio>
-
       <div className="absolute top-0 w-full h-[6px] bg-black z-20"></div>
       
       <div className="second_background">
