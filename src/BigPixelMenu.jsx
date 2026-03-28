@@ -57,7 +57,7 @@ const BigPixelMenu = () => {
         </div>
 
     <a 
-  href={`${import.meta.env.BASE_URL}Zengtao_Liang_Resume.pdf`} 
+  href="Zengtao_Liang_Resume.pdf" 
   target="_blank" 
   rel="noopener noreferrer"
   className="block w-full cursor-pointer"

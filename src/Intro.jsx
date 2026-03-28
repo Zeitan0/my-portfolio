@@ -47,7 +47,7 @@ const handleMusicToggle = () => {
   return (
     <>
       <audio ref={audioRef} loop muted={false} preload="auto">
-  <source src="/bg-music.mp3" type="audio/mpeg" />
+  <source src="bg-music.mp3" type="audio/mpeg" />
 </audio>
 
       <div className="absolute top-0 w-full h-[6px] bg-black z-20"></div>
