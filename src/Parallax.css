@@ -1,0 +1,78 @@
+
+main {
+    position: relative;
+
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+.layer {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+}
+
+
+.layer:nth-child(1) {
+  top: -13%;
+}
+
+.layer:nth-child(2) {
+  top: -10%;
+}
+
+.layer:nth-child(3) {
+  top: -8%;
+}
+
+.layer:nth-child(4) {
+  top: -6%;
+}
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+.scroll-layer {
+  overflow:hidden;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  display: flex;
+  width: max-content;
+  z-index: 1;
+  pointer-events: none;
+
+  animation: scroll 15s linear infinite;
+}
+
+.scroll-layer img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
