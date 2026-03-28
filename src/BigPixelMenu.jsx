@@ -57,11 +57,11 @@ const BigPixelMenu = () => {
         </div>
 
     <a 
-      href="/Zengtao_Liang_Resume.pdf" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="block w-full cursor-pointer"
-    >
+  href={`${import.meta.env.BASE_URL}Zengtao_Liang_Resume.pdf`} 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="block w-full cursor-pointer"
+>
         <button 
           className="w-full bg-[#0021A5] hover:bg-[#FA4616] text-white border-[4px] border-black py-5 px-10 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all"
         >
