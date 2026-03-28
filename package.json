@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://zeitan0.github.io/zl-web",
+  "homepage": "https://zeitan0.github.io/my-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
