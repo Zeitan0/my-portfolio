@@ -5,6 +5,7 @@ import taskManagement from "./assets/TaskManagementWeb.png";
 import XML from "./assets/XML-File.png";
 import Lua from "./assets/Lua.webp";
 import MaxWash from "./assets/Max Wash.png";
+import ppPad from "./assets/ppPad.png";
 
 const projects = [
   { id: 1, title: "FUSE-Based WAD File System", image: wadImage, tech: "C++ / linux", github: "https://github.com/Zeitan0/Wad-File-FUSE-System", fullDesc: "File management project that implements a custom file system for WAD files using Linux's FUSE (Filesystem in Userspace) software." },
@@ -24,6 +25,8 @@ const Project = () => {
         className="relative min-h-screen p-6 md:p-16 animate-in fade-in zoom-in-95 duration-300 flex flex-col items-center justify-center"
         style={{ background: "linear-gradient(135deg, #fff1f5, #ffe4e6)" }}
       >
+
+        
         <div className="w-full max-w-[1200px] bg-white border-[6px] border-black shadow-[15px_15px_0px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden">
           
           <div className="bg-black text-white p-4 flex justify-between items-center">
@@ -94,6 +97,27 @@ const Project = () => {
       className="relative min-h-screen py-20 px-8 flex flex-col items-center animate-in fade-in duration-500"
       style={{ background: "linear-gradient(135deg, #fff1f5, #ffe4e6)" }}
     >
+
+  
+  <div className="absolute bottom-[-10vh] left-[8vw] -translate-y-1/2 w-12 md:w-50 z-1 rotate-150 pointer-events-none">
+    <img 
+      src={ppPad} 
+      alt="pp Pad" 
+      className="w-40 h-auto object-contain"
+      style={{ imageRendering: 'pixelated' }}
+    />
+  </div>
+
+    <div className="absolute bottom-[-10vh] right-[vw] -translate-y-1/2 w-12 md:w-50 z-1 rotate-330 pointer-events-none">
+    <img 
+      src={ppPad} 
+      alt="pp Pad" 
+      className="w-40 h-auto object-contain"
+      style={{ imageRendering: 'pixelated' }}
+    />
+  </div>
+  
+
       <div className="absolute top-0 left-0 w-full h-[6px] bg-black z-20 shadow-md"></div>
 
       <h2 className="text-black mb-16 text-center uppercase tracking-[0.2em]"
