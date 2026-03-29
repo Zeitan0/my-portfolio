@@ -1,12 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
   const [status, setStatus] = useState("READY");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("SENDING");
-    setTimeout(() => setStatus("SENT"), 1500);
+
+    const SERVICE_ID = "service_l7icis8";
+    const TEMPLATE_ID = "template_69khy1f";
+    const PUBLIC_KEY = "GGRhhZ6SfFLlbcT91";
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .then((result) => {
+        console.log("Success!", result.text);
+        setStatus("SENT");
+        form.current.reset(); // Clears the form after success
+      }, (error) => {
+        console.log("Failed...", error.text);
+        setStatus("READY");
+        alert("Transmission Interrupted. Please try again.");
+      });
   };
 
   return (
@@ -26,27 +42,44 @@ const Contact = () => {
           <div className="w-4"></div>
         </div>
 
-        {/* Form Body */}
-        <form onSubmit={handleSubmit} className="p-6 md:p-10 space-y-6">
+        <form ref={form} onSubmit={handleSubmit} className="p-6 md:p-10 space-y-6">
           <div className="space-y-2">
             <label className="block text-[10px] md:text-xs font-bold uppercase tracking-tighter" style={{ fontFamily: "'Press Start 2P', cursive" }}>
               User Name:
             </label>
-            <input required type="text" className="w-full bg-gray-100 border-4 border-black p-3 font-mono text-sm outline-none focus:bg-white" placeholder="Enter ID..." />
+            <input 
+              name="user_name"
+              required 
+              type="text" 
+              className="w-full bg-gray-100 border-4 border-black p-3 font-mono text-sm outline-none focus:bg-white" 
+              placeholder="Enter ID..." 
+            />
           </div>
 
           <div className="space-y-2">
             <label className="block text-[10px] md:text-xs font-bold uppercase tracking-tighter" style={{ fontFamily: "'Press Start 2P', cursive" }}>
               Subject:
             </label>
-            <input required type="text" className="w-full bg-gray-100 border-4 border-black p-3 font-mono text-sm outline-none focus:bg-white" placeholder="Message Title..." />
+            <input 
+              name="subject"
+              required 
+              type="text" 
+              className="w-full bg-gray-100 border-4 border-black p-3 font-mono text-sm outline-none focus:bg-white" 
+              placeholder="Message Title..." 
+            />
           </div>
 
           <div className="space-y-2">
             <label className="block text-[10px] md:text-xs font-bold uppercase tracking-tighter" style={{ fontFamily: "'Press Start 2P', cursive" }}>
               Transmission:
             </label>
-            <textarea required rows="4" className="w-full bg-gray-100 border-4 border-black p-3 font-mono text-sm outline-none focus:bg-white resize-none" placeholder="Type your message here..."></textarea>
+            <textarea 
+              name="message"
+              required 
+              rows="4" 
+              className="w-full bg-gray-100 border-4 border-black p-3 font-mono text-sm outline-none focus:bg-white resize-none" 
+              placeholder="Type your message here..."
+            ></textarea>
           </div>
 
           <button 
@@ -64,7 +97,6 @@ const Contact = () => {
       </div>
 
       <div className="mt-20 w-full max-w-[700px] flex flex-col items-center gap-12 text-center">
-      
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-20 border-y-4 border-pink-200 py-10 w-full relative">
             <div className="flex flex-col gap-2">
                 <span className="text-[8px] font-mono uppercase tracking-[0.3em] text-pink-400">Lead Developer</span>

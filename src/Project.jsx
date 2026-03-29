@@ -1,12 +1,18 @@
 import React, { useState } from "react";
+import wadImage from "./assets/WadFile.png";
+import pixelPor from "./assets/PixelPor.png";
+import taskManagement from "./assets/TaskManagementWeb.png";
+import XML from "./assets/XML-File.png";
+import Lua from "./assets/Lua.webp";
+import MaxWash from "./assets/Max Wash.png";
 
 const projects = [
-  { id: 1, title: "NLP Processor", image: "/assets/project_nlp.png", tech: "Python / spaCy", github: "#", fullDesc: "Built at UF for linguistic research. Implements Viterbi algorithms and custom spaCy pipelines for POS tagging." },
-  { id: 2, title: "Pixel Portfolio", image: "/assets/project_web.png", tech: "React / Tailwind", github: "#", fullDesc: "A digital environment with parallax effects and Aseprite animations. Showcase of React proficiency." },
-  { id: 3, title: "Stats Model", image: "/assets/project_stats.png", tech: "R / Statistics", github: "#", fullDesc: "Advanced modeling including Maximum Likelihood Estimators and linear regression analysis." },
-  { id: 4, title: "Gator Game", image: "/assets/project4.png", tech: "GSAP / React", github: "#", fullDesc: "A sprite-based interaction project focusing on smooth animations and game logic in the browser." },
-  { id: 5, title: "Web Scraper", image: "/assets/project5.png", tech: "Node.js / Cheerio", github: "#", fullDesc: "Automated data extraction tool used for gathering environmental impact data on plastic pollution." },
-  { id: 6, title: "UI Elements", image: "/assets/project6.png", tech: "CSS / Design", github: "#", fullDesc: "A custom library of retro-pixel UI components designed for high-resolution monitors." }
+  { id: 1, title: "FUSE-Based WAD File System", image: wadImage, tech: "C++ / linux", github: "https://github.com/Zeitan0/Wad-File-FUSE-System", fullDesc: "File management project that implements a custom file system for WAD files using Linux's FUSE (Filesystem in Userspace) software." },
+  { id: 2, title: "Pixel Portfolio", image: pixelPor, tech: "React / Tailwind", github: "https://github.com/Zeitan0/my-portfolio", fullDesc: "A digital environment with parallax effects and Aseprite animations. Showcase of React proficiency." },
+  { id: 3, title: "Task Management Web", image: taskManagement, tech: "React / Node / MongoDB", github: "https://github.com/Zeitan0/Task-Management-Web", fullDesc: "A full-stack web application designed to help users efficiently manage their daily tasks and projects" },
+  { id: 4, title: "XML File Reader", image: XML, tech: "C++ / HTML", github: "https://github.com/Zeitan0/xml-File-Reader?tab=readme-ov-file", fullDesc: "A lightweight tool for parsing and reading XML files. Supports navigating XML nodes, extracting attributes, and converting XML data into usable formats for further processing." },
+  { id: 5, title: "Lua interpreter", image: Lua, tech: "Rust", github: "https://github.com/Zeitan0/Lua-interpreter", fullDesc: "A lightweight Lua interpreter implemented in Rust. It executes Lua scripts efficiently, supports core Lua features, and can be embedded into Rust projects to provide scripting capabilities." },
+  { id: 6, title: "Max Wash", image: MaxWash, tech: "Unity / C#", github: "https://github.com/Zeitan0/", fullDesc: "A self-made car wash simulation game built in Unity. Players manage cars through washing, drying, and detailing processes, improving efficiency and earning points. Features include interactive gameplay, retro-inspired UI, and a progression system for unlocking upgrades." }
 ];
 
 const Project = () => {
@@ -29,7 +35,7 @@ const Project = () => {
               ← Close_File
             </button>
             <span className="font-mono text-[10px] uppercase tracking-widest hidden md:block">
-              Mission_ID: 0{selectedProject.id} // SECURE_ACCESS
+              Mission_ID: 0{selectedProject.id}
             </span>
           </div>
 
