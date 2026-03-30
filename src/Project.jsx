@@ -108,7 +108,7 @@ const Project = () => {
     />
   </div>
 
-    <div className="absolute bottom-[-10vh] right-[vw] -translate-y-1/2 w-12 md:w-50 z-1 rotate-330 pointer-events-none">
+    <div className="absolute bottom-[-10vh] right-[7vw] -translate-y-1/2 w-12 md:w-50 z-1 rotate-330 pointer-events-none">
     <img 
       src={ppPad} 
       alt="pp Pad" 
