@@ -1,6 +1,22 @@
 import React from 'react';
 
 const Header = () => {
+  // NEW: Smooth scroll handler
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const targetId = id.toLowerCase();
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      // Optional: Update URL without jumping
+      window.history.pushState(null, '', `#${targetId}`);
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-[1000] p-4">
       <nav className="bg-[#fff1f5] border-[4px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-between px-6 py-3 max-w-7xl mx-auto">
@@ -19,7 +35,8 @@ const Header = () => {
             <li key={item}>
               <a 
                 href={`#${item.toLowerCase()}`}
-                className="font-['Press_Start_2P'] text-[10px] text-gray-700 hover:text-[#FA4616] hover:underline underline-offset-4 decoration-2 transition-colors"
+                onClick={(e) => handleScroll(e, item)} // Added click handler
+                className="font-['Press_Start_2P'] text-[10px] text-gray-700 hover:text-[#FA4616] hover:underline underline-offset-4 decoration-2 transition-colors cursor-pointer"
               >
                 {item}
               </a>

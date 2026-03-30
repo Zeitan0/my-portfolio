@@ -9,16 +9,18 @@ function App() {
   return (
     <>
       <Header />
-      <div style={{ position: "relative", height: "100vh" }}>
+      <div id="home" style={{ position: "relative", height: "100vh" }}>
         <Parallax />
       </div>
 
       <section 
+        id="about"
         style={{ 
           position: "relative", 
           width: "100%", 
           background: "linear-gradient(135deg, #fff1f5, #ffe4e6)",
-          minHeight: "100vh"
+          minHeight: "100vh",
+          scrollMarginTop: "100px"
         }}
       >
         <Intro />
@@ -36,12 +38,14 @@ function App() {
       </section>
 
       <section 
+        id="projects"
         style={{ 
           position: "relative", 
           zIndex: 51, 
           width: "100%", 
           background: "linear-gradient(135deg, #fff1f5, #ffe4e6)",
-          minHeight: "100vh"
+          minHeight: "100vh",
+          scrollMarginTop: "100px"
         }}
       >
         <Project />
