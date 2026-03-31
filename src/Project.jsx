@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import wadImage from "./assets/WadFile.png";
-import pixelPor from "./assets/PixelPor.png";
+import resumeBot from "./assets/resume_bot.png";
 import taskManagement from "./assets/TaskManagementWeb.png";
 import XML from "./assets/XML-File.png";
 import Lua from "./assets/Lua.webp";
@@ -9,7 +9,7 @@ import ppPad from "./assets/ppPad.png";
 
 const projects = [
   { id: 1, title: "FUSE-Based WAD File System", image: wadImage, tech: "C++ / linux", github: "https://github.com/Zeitan0/Wad-File-FUSE-System", fullDesc: "File management project that implements a custom file system for WAD files using Linux's FUSE (Filesystem in Userspace) software." },
-  { id: 2, title: "Pixel Portfolio", image: pixelPor, tech: "React / Tailwind", github: "https://github.com/Zeitan0/my-portfolio", fullDesc: "A digital environment with parallax effects and Aseprite animations. Showcase of React proficiency." },
+  { id: 2, title: "Resume Bot", image: resumeBot, tech: "Flask / Ollama", github: "https://github.com/Zeitan0/ai-resume-chatbot", fullDesc: "An AI-powered RAG assistant integrated with Ollama. Allows users to query my professional experience through a custom pixel-art terminal." },
   { id: 3, title: "Task Management Web", image: taskManagement, tech: "React / Node / MongoDB", github: "https://github.com/Zeitan0/Task-Management-Web", fullDesc: "A full-stack web application designed to help users efficiently manage their daily tasks and projects" },
   { id: 4, title: "XML File Reader", image: XML, tech: "C++ / HTML", github: "https://github.com/Zeitan0/xml-File-Reader?tab=readme-ov-file", fullDesc: "A lightweight tool for parsing and reading XML files. Supports navigating XML nodes, extracting attributes, and converting XML data into usable formats for further processing." },
   { id: 5, title: "Lua interpreter", image: Lua, tech: "Rust", github: "https://github.com/Zeitan0/Lua-interpreter", fullDesc: "A lightweight Lua interpreter implemented in Rust. It executes Lua scripts efficiently, supports core Lua features, and can be embedded into Rust projects to provide scripting capabilities." },
